@@ -1,5 +1,7 @@
 ## :ledger: App Ideas Collection
 
+Forked to redesign repository primarily based on C#
+
 ![App Ideas Image](./app-ideas.png)
 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](./CONTRIBUTING.md)
