@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-Bin2Dec",
+      "appliesTo": "Projects/1-Beginner/Bin2Dec/",
+      "type": "launch"
+    }
+  ]
+}

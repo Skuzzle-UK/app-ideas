@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Bin2Dec/1.0.0": {
+        "runtime": {
+          "Bin2Dec.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Bin2Dec/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
