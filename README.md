@@ -1,6 +1,6 @@
 ## :ledger: App Ideas Collection
 
-Forked to redesign repository primarily based on C#
+Forked to follow through repository ideas primarily based on C#. Apps source code will be added as and when I complete the tasks.
 
 ![App Ideas Image](./app-ideas.png)
 
