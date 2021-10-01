@@ -1,3 +1,24 @@
+## Completed project
+Project fully completed as a C# console app. I have also created the reverse conversion from decimal to binary.
+
+Binary.cs contains a C# class that has been built with the intention of being reusable in future projects.
+
+                //gets binary input
+                Console.WriteLine("Input a binary number:");
+                Console.Write(">");
+                Bin binary = new(Console.ReadLine()); //Created using a string
+
+                //converts to decimal
+                decimal decoutput = binary.ToDecimal(); //Conversion as a member function
+                Console.WriteLine();
+                Console.Write("Converted to decimal: ");
+                Console.WriteLine(decoutput);
+
+                //converts back to binary
+                Bin binoutput = Bin.ToBinary(decoutput); //Conversion as a static method
+                Console.Write("Converted back to binary: ");
+                Console.WriteLine(binoutput.Value);
+
 # Bin2Dec
 
 **Tier:** 1-Beginner
@@ -21,13 +42,13 @@ constraints:
 
 ## User Stories
 
--   [ ] User can enter up to 8 binary digits in one input field
--   [ ] User must be notified if anything other than a 0 or 1 was entered
--   [ ] User views the results in a single output field containing the decimal (base 10) equivalent of the binary number that was entered
+-   [x] User can enter up to 8 binary digits in one input field
+-   [x] User must be notified if anything other than a 0 or 1 was entered
+-   [x] User views the results in a single output field containing the decimal (base 10) equivalent of the binary number that was entered
 
 ## Bonus features
 
--   [ ] User can enter a variable number of binary digits
+-   [x] User can enter a variable number of binary digits
 
 ## Useful links and resources
 
