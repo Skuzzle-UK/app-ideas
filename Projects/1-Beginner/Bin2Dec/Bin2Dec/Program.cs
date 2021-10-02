@@ -14,17 +14,21 @@ namespace B2D
                 Console.WriteLine("Input a binary number:");
                 Console.Write(">");
                 Bin binary = new(Console.ReadLine());
+                
+                if (binary.Value != null) //Required for null input to not error
+                {
+                    //converts to decimal
+                    decimal decoutput = binary.ToDecimal();
+                    Console.WriteLine();
+                    Console.Write("Converted to decimal: ");
+                    Console.WriteLine(decoutput);
 
-                //converts to decimal
-                decimal decoutput = binary.ToDecimal();
-                Console.WriteLine();
-                Console.Write("Converted to decimal: ");
-                Console.WriteLine(decoutput);
-
-                //converts back to binary
-                Bin binoutput = Bin.ToBinary(decoutput);
-                Console.Write("Converted back to binary: ");
-                Console.WriteLine(binoutput.Value);
+                    //converts back to binary
+                    Bin binoutput = Bin.ToBinary(decoutput);
+                    Console.Write("Converted back to binary: ");
+                    Console.WriteLine(binoutput.Value);
+                }
+                else { throw new Exception(); }
             }
             catch { Console.WriteLine("Input was not a binary number"); }
 
