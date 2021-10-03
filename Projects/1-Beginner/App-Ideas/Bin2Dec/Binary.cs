@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace Binary
 {
@@ -32,13 +31,13 @@ namespace Binary
         public decimal ToDecimal()
         {
             decimal val = 0;
-                int placevalue = 1;
-                char[] chars = _value.ToCharArray();
-                for (int i = chars.Length - 1; i >= 0; i--)
-                {
-                    val += int.Parse(chars[i].ToString()) * placevalue;
-                    placevalue *= 2;
-                }
+            int placevalue = 1;
+            char[] chars = _value.ToCharArray();
+            for (int i = chars.Length - 1; i >= 0; i--)
+            {
+                val += int.Parse(chars[i].ToString()) * placevalue;
+                placevalue *= 2;
+            }
             return val;
         }
 
@@ -47,7 +46,7 @@ namespace Binary
             Binary value = new Binary();
             while (dec != 0)
             {
-                decimal remainder = dec % 2 ;
+                decimal remainder = dec % 2;
                 if (remainder > 0)
                 {
                     value.Value += "1";
@@ -56,7 +55,7 @@ namespace Binary
                 {
                     value.Value += "0";
                 }
-                
+
                 dec = Math.Floor(dec / 2);
             }
             char[] chars = value.Value.ToCharArray();

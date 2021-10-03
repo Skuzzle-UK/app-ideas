@@ -1,5 +1,4 @@
 ﻿using System;
-using Binary;
 using Bin = Binary.Binary;
 
 namespace B2D
@@ -14,7 +13,7 @@ namespace B2D
                 Console.WriteLine("Input a binary number:");
                 Console.Write(">");
                 Bin binary = new(Console.ReadLine());
-                
+
                 if (binary.Value != null) //Required for null input to not error
                 {
                     //converts to decimal
