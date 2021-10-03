@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Windows;
+﻿using System.Windows;
 
 namespace Calculator
 {
@@ -18,6 +15,18 @@ namespace Calculator
             DataContext = sum;
         }
 
+        private bool CheckCharCount()
+        {
+            if (sum.summand.Length == 10)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         private void ButtonC_Click(object sender, RoutedEventArgs e)
         {
             sum.Clear();
@@ -30,57 +39,90 @@ namespace Calculator
 
         private void Button0_Click(object sender, RoutedEventArgs e)
         {
-            sum.AppendSummand(0);
+            if (CheckCharCount())
+            {
+                sum.AppendSummand(0);
+            }
         }
 
         private void Button1_Click(object sender, RoutedEventArgs e)
         {
-            sum.AppendSummand(1);
+            if (CheckCharCount())
+            {
+                sum.AppendSummand(1);
+            }
         }
 
         private void Button2_Click(object sender, RoutedEventArgs e)
         {
-            sum.AppendSummand(2);
+            if (CheckCharCount())
+            {
+                sum.AppendSummand(2);
+            }
         }
 
         private void Button3_Click(object sender, RoutedEventArgs e)
         {
-            sum.AppendSummand(3);
+            if (CheckCharCount())
+            {
+                sum.AppendSummand(3);
+            }
         }
 
         private void Button4_Click(object sender, RoutedEventArgs e)
         {
-            sum.AppendSummand(4);
+            if (CheckCharCount())
+            {
+                sum.AppendSummand(4);
+            }
         }
 
         private void Button5_Click(object sender, RoutedEventArgs e)
         {
-            sum.AppendSummand(5);
+            if (CheckCharCount())
+            {
+                sum.AppendSummand(5);
+            }
         }
 
         private void Button6_Click(object sender, RoutedEventArgs e)
         {
-            sum.AppendSummand(6);
+            if (CheckCharCount())
+            {
+                sum.AppendSummand(6);
+            }
         }
 
         private void Button7_Click(object sender, RoutedEventArgs e)
         {
-            sum.AppendSummand(7);
+            if (CheckCharCount())
+            {
+                sum.AppendSummand(7);
+            }
         }
 
         private void Button8_Click(object sender, RoutedEventArgs e)
         {
-            sum.AppendSummand(8);
+            if (CheckCharCount())
+            {
+                sum.AppendSummand(8);
+            }
         }
 
         private void Button9_Click(object sender, RoutedEventArgs e)
         {
-            sum.AppendSummand(9);
+            if (CheckCharCount())
+            {
+                sum.AppendSummand(9);
+            }
         }
 
         private void ButtonDot_Click(object sender, RoutedEventArgs e)
         {
-            sum.AppendDecimalPlace();
+            if (CheckCharCount())
+            {
+                sum.AppendDecimalPlace();
+            }
         }
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
@@ -107,126 +149,18 @@ namespace Calculator
         {
             sum.Operation(Sum.Operator.equal);
         }
-    }
 
-    public class Sum : INotifyPropertyChanged
-    {
-        public enum Operator
+        private void ButtonSign_Click(object sender, RoutedEventArgs e)
         {
-            none,
-            add,
-            subtract,
-            multiply,
-            divide,
-            equal
-        }
-
-        public decimal product { get; set; }
-        private string _summand;
-        public string summand
-        {
-            get
+            if (LabelSign.Visibility == Visibility.Hidden)
             {
-                return _summand;
+                LabelSign.Visibility = Visibility.Visible;
             }
-            set
+            else
             {
-                _summand = value;
-                NotifyPropertyChanged("summand");
+                LabelSign.Visibility = Visibility.Hidden;
             }
-        }
-        private bool _decimalPlace;
-        private List<decimal> _productHistory = new List<decimal>();
-        Operator @lastoperator;
-
-        protected void NotifyPropertyChanged(String propertyName)
-        {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public Sum()
-        {
-            Reset();
-        }
-
-        public void Reset()
-        {
-            lastoperator = Operator.none;
-            summand = "0";
-            product = 0;
-            _decimalPlace = false;
-            _productHistory.Clear();
-        }
-
-        public void Clear()
-        {
-            _decimalPlace = false;
-            summand = "0";
-        }
-
-        public void AppendSummand(int digit)
-        {
-            if (EmptySummand()) { summand = null; }
-            summand += (digit.ToString());
-        }
-
-        public void AppendDecimalPlace()
-        {
-            if (!_decimalPlace)
-            {
-                summand += ".";
-                _decimalPlace = true;
-            }
-        }
-
-        public void Operation(Operator @operator)
-        {
-            switch (lastoperator)
-            {
-                case Operator.none:
-                    product = int.Parse(summand);
-                    lastoperator = @operator;
-                    Clear();
-                    break;
-                case Operator.add:
-                    product += int.Parse(summand);
-                    lastoperator = @operator;
-                    Clear();
-                    break;
-                case Operator.divide:
-                    product /= int.Parse(summand);
-                    lastoperator = @operator;
-                    Clear();
-                    break;
-                case Operator.multiply:
-                    product *= int.Parse(summand);
-                    lastoperator = @operator;
-                    Clear();
-                    break;
-                case Operator.subtract:
-                    product -= int.Parse(summand);
-                    lastoperator = @operator;
-                    Clear();
-                    break;
-            }
-            if (@operator == Operator.equal)
-            {
-                summand = product.ToString();
-            }
-        }
-
-        private bool EmptySummand()
-        {
-            switch (summand)
-            {
-                case "0":
-                    return true;
-                default:
-                    return false;
-            }
+            sum.SummandSignSwap();
         }
     }
 }

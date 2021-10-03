@@ -22,7 +22,7 @@
                 </LinearGradientBrush>
             </Rectangle.Stroke>
         </Rectangle>
-        <TextBox x:Name="ValueDisplay" TextWrapping="Wrap" Height="81" Margin="14,62,0,0" VerticalAlignment="Top" Background="#FFF3F3F3" BorderThickness="15,8,15,8" HorizontalAlignment="Left" Width="372" Grid.ColumnSpan="4" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontFamily="{StaticResource Digital}" FontSize="70" MaxLength="10" MaxLines="1" Text="{Binding summand}">
+        <TextBox x:Name="ValueDisplay" TextWrapping="Wrap" Height="81" Margin="14,62,0,0" VerticalAlignment="Top" Background="#FFF3F3F3" BorderThickness="15,8,15,8" HorizontalAlignment="Left" Width="372" Grid.ColumnSpan="4" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontFamily="{StaticResource Digital}" FontSize="65" MaxLength="10" MaxLines="1" Text="{Binding summand}">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF747474"/>
@@ -30,6 +30,7 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
+        
         <Button x:Name="ButtonAdd" Content="+" Margin="153,390,0,0" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="40" FontWeight="Normal" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" UseLayoutRounding="False" Height="89" Width="52" Grid.Column="2" Grid.ColumnSpan="2" Click="ButtonAdd_Click">
             <Button.Effect>
                 <DropShadowEffect/>
@@ -251,7 +252,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="ButtonSign" Content="+/-" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="27,334,0,0" Grid.ColumnSpan="2">
+        <Button x:Name="ButtonSign" Content="+/-" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="27,334,0,0" Grid.ColumnSpan="2" Click="ButtonSign_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -438,6 +439,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
+        <Label x:Name="LabelSign" Content="-" Grid.ColumnSpan="2" Margin="27,70,101,392" FontSize="65" FontFamily="Digital-7" FontWeight="Normal" Visibility="Hidden"/>
 
     </Grid>
 
