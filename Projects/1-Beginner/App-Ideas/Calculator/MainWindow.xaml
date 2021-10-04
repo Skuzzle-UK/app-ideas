@@ -439,7 +439,21 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Label x:Name="LabelSign" Content="-" Grid.ColumnSpan="2" Margin="27,70,101,392" FontSize="65" FontFamily="Digital-7" FontWeight="Normal" Visibility="Hidden"/>
+        <Label x:Name="LabelSign" Content="-" Grid.ColumnSpan="2" Margin="27,70,101,392" FontSize="65" FontFamily="Digital-7" FontWeight="Normal">
+            <Label.Style>
+                <Style TargetType="{x:Type Label}">
+                    <Setter Property="Visibility" Value="Hidden" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding sign}" Value="positive">
+                            <Setter Property="Visibility" Value="Hidden" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding sign}" Value="negative">
+                            <Setter Property="Visibility" Value="Visible" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Label.Style>
+        </Label>
 
     </Grid>
 

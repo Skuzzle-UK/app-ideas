@@ -152,14 +152,6 @@ namespace Calculator
 
         private void ButtonSign_Click(object sender, RoutedEventArgs e)
         {
-            if (LabelSign.Visibility == Visibility.Hidden)
-            {
-                LabelSign.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                LabelSign.Visibility = Visibility.Hidden;
-            }
             sum.SummandSignSwap();
         }
     }

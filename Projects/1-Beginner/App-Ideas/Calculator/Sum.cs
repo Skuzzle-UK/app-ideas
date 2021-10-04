@@ -16,13 +16,14 @@ namespace Calculator
             equal
         }
 
-        private enum Sign
+        public enum Sign
         {
             positive,
             negative
         }
 
         public decimal product { get; set; }
+        
         private string _summand;
         public string summand
         {
@@ -39,7 +40,21 @@ namespace Calculator
         private bool _decimalPlace;
         private List<decimal> _productHistory = new List<decimal>();
         private Operator @lastoperator;
-        private Sign @sign;
+        
+        private Sign _sign;
+        public Sign @sign
+        {
+            get
+            {
+                return _sign;
+            }
+            set
+            {
+                _sign = value;
+                NotifyPropertyChanged("sign");
+            }
+        }
+
 
         protected void NotifyPropertyChanged(String propertyName)
         {
@@ -98,30 +113,38 @@ namespace Calculator
 
         public void Operation(Operator @operator)
         {
+            decimal val = decimal.Parse(summand);
+            
+            if(sign == Sign.negative)
+            {
+                val *= -1;
+            }
+            SummandSignSwap();
+
             switch (lastoperator)
             {
                 case Operator.none:
-                    product = int.Parse(summand);
+                    product = val;
                     lastoperator = @operator;
                     Clear();
                     break;
                 case Operator.add:
-                    product += int.Parse(summand);
+                    product += val;
                     lastoperator = @operator;
                     Clear();
                     break;
                 case Operator.divide:
-                    product /= int.Parse(summand);
+                    product /= val;
                     lastoperator = @operator;
                     Clear();
                     break;
                 case Operator.multiply:
-                    product *= int.Parse(summand);
+                    product *= val;
                     lastoperator = @operator;
                     Clear();
                     break;
                 case Operator.subtract:
-                    product -= int.Parse(summand);
+                    product -= val;
                     lastoperator = @operator;
                     Clear();
                     break;
