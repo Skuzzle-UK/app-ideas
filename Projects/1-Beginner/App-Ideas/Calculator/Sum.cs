@@ -149,6 +149,7 @@ namespace Calculator
                     Clear();
                     break;
                 case Operator.equal:
+                    product = val;
                     lastoperator = @operator;
                     Clear();
                     break;
