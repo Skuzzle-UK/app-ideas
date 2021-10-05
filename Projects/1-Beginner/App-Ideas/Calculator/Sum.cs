@@ -156,7 +156,15 @@ namespace Calculator
             }
             if (@operator == Operator.equal)
             {
-                summand = product.ToString();
+                summand = Math.Abs(product).ToString();
+                if (product < 0)
+                {
+                    sign = Sign.negative;
+                }
+                else
+                {
+                    sign = Sign.positive;
+                }
                 lastoperator = @operator;
             }
         }
