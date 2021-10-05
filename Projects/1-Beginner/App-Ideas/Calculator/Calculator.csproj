@@ -8,10 +8,14 @@
 
   <ItemGroup>
     <None Remove="Fonts\digital-7.ttf" />
+    <None Remove="Fonts\EurostileBold.ttf" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Fonts\digital-7.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\EurostileBold.ttf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

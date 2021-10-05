@@ -126,32 +126,32 @@ namespace Calculator
                 case Operator.none:
                     product = val;
                     lastoperator = @operator;
-                    Clear();
+                    Clear(); //Change at later date to set a flag for clear so that previous value can remain displayed until first digit of new value is entered.
                     break;
                 case Operator.add:
                     product += val;
                     lastoperator = @operator;
-                    Clear();
+                    Clear(); //Change at later date to set a flag for clear so that previous value can remain displayed until first digit of new value is entered.
                     break;
                 case Operator.divide:
                     product /= val;
                     lastoperator = @operator;
-                    Clear();
+                    Clear(); //Change at later date to set a flag for clear so that previous value can remain displayed until first digit of new value is entered.
                     break;
                 case Operator.multiply:
                     product *= val;
                     lastoperator = @operator;
-                    Clear();
+                    Clear(); //Change at later date to set a flag for clear so that previous value can remain displayed until first digit of new value is entered.
                     break;
                 case Operator.subtract:
                     product -= val;
                     lastoperator = @operator;
-                    Clear();
+                    Clear(); //Change at later date to set a flag for clear so that previous value can remain displayed until first digit of new value is entered.
                     break;
                 case Operator.equal:
                     product = val;
                     lastoperator = @operator;
-                    Clear();
+                    Clear(); //Change at later date to set a flag for clear so that previous value can remain displayed until first digit of new value is entered.
                     break;
             }
             if (@operator == Operator.equal)
