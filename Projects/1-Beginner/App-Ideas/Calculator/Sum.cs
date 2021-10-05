@@ -148,10 +148,15 @@ namespace Calculator
                     lastoperator = @operator;
                     Clear();
                     break;
+                case Operator.equal:
+                    lastoperator = @operator;
+                    Clear();
+                    break;
             }
             if (@operator == Operator.equal)
             {
                 summand = product.ToString();
+                lastoperator = @operator;
             }
         }
 
