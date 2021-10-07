@@ -13,7 +13,8 @@ namespace Calculator
             subtract,
             multiply,
             divide,
-            equal
+            equal,
+            percent
         }
 
         public enum Sign
@@ -23,7 +24,9 @@ namespace Calculator
         }
 
         public decimal product { get; set; }
-        
+
+        public bool DisplayingProduct = false;
+
         private string _summand;
         public string summand
         {
@@ -33,6 +36,18 @@ namespace Calculator
             }
             set
             {
+                if (value != null)
+                {
+                    char[] chars = value.ToCharArray();
+                    if (chars[0].ToString() == "-")
+                    {
+                        value = null;
+                        for (int i = 1; i < chars.Length; i++)
+                        {
+                            value += chars[i].ToString();
+                        }
+                    }
+                }
                 _summand = value;
                 NotifyPropertyChanged("summand");
             }
@@ -84,9 +99,20 @@ namespace Calculator
             summand = "0";
         }
 
+        public void DisplayProduct()
+        {
+            DisplayingProduct = true;
+            summand = product.ToString();
+        }
+
         public void AppendSummand(int digit)
         {
-            if (EmptySummand()) { summand = null; }
+            if (EmptySummand() || DisplayingProduct)
+            {
+                sign = Sign.positive;
+                summand = null;
+                DisplayingProduct = false;
+            }
             summand += (digit.ToString());
         }
 
@@ -119,41 +145,70 @@ namespace Calculator
             {
                 val *= -1;
             }
-            SummandSignSwap();
 
-            switch (lastoperator)
+            if (@operator != Operator.percent)
             {
-                case Operator.none:
-                    product = val;
-                    lastoperator = @operator;
-                    Clear(); //Change at later date to set a flag for clear so that previous value can remain displayed until first digit of new value is entered.
-                    break;
-                case Operator.add:
-                    product += val;
-                    lastoperator = @operator;
-                    Clear(); //Change at later date to set a flag for clear so that previous value can remain displayed until first digit of new value is entered.
-                    break;
-                case Operator.divide:
-                    product /= val;
-                    lastoperator = @operator;
-                    Clear(); //Change at later date to set a flag for clear so that previous value can remain displayed until first digit of new value is entered.
-                    break;
-                case Operator.multiply:
-                    product *= val;
-                    lastoperator = @operator;
-                    Clear(); //Change at later date to set a flag for clear so that previous value can remain displayed until first digit of new value is entered.
-                    break;
-                case Operator.subtract:
-                    product -= val;
-                    lastoperator = @operator;
-                    Clear(); //Change at later date to set a flag for clear so that previous value can remain displayed until first digit of new value is entered.
-                    break;
-                case Operator.equal:
-                    product = val;
-                    lastoperator = @operator;
-                    Clear(); //Change at later date to set a flag for clear so that previous value can remain displayed until first digit of new value is entered.
-                    break;
+                switch (lastoperator)
+                {
+                    case Operator.none:
+                        product = val;
+                        lastoperator = @operator;
+                        DisplayProduct();
+                        break;
+                    case Operator.add:
+                        product += val;
+                        lastoperator = @operator;
+                        DisplayProduct();
+                        break;
+                    case Operator.divide:
+                        product /= val;
+                        lastoperator = @operator;
+                        DisplayProduct();
+                        break;
+                    case Operator.multiply:
+                        product *= val;
+                        lastoperator = @operator;
+                        DisplayProduct();
+                        break;
+                    case Operator.subtract:
+                        product -= val;
+                        lastoperator = @operator;
+                        DisplayProduct();
+                        break;
+                    case Operator.equal:
+                        lastoperator = @operator;
+                        DisplayProduct();
+                        break;
+                }
             }
+            else
+            {
+                //@TODO Code here for percentage calc
+                switch (lastoperator)
+                {
+                    case Operator.none:
+                        break;
+                    case Operator.add:
+                        //Should work out summand percent of product and then add that value to product.
+                        DisplayProduct();
+                        break;
+                    case Operator.divide:
+                        //@TODO Not sure what to do here: test a calculator if I get a chance to see what happens if you key eg.. 600 / 30 %
+                        break;
+                    case Operator.multiply:
+                        //Should work out summand percent of product and then display the percentage.
+                        DisplayProduct();
+                        break;
+                    case Operator.subtract:
+                        //Should work out summand percent of product and then subtract that value from product.
+                        DisplayProduct();
+                        break;
+                    case Operator.equal:
+                        //@TODO Not sure what to do here: test a calculator if I get a chance to see what happens if you key eg.. 600 / 30 %
+                        break;
+                }
+            }
+
             if (@operator == Operator.equal)
             {
                 summand = Math.Abs(product).ToString();
@@ -166,6 +221,7 @@ namespace Calculator
                     sign = Sign.positive;
                 }
                 lastoperator = @operator;
+                DisplayProduct();
             }
         }
 

@@ -133,7 +133,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="ButtonPercent" Content="%" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="80,228,0,0" Grid.Column="2">
+        <Button x:Name="ButtonPercent" Content="%" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="80,228,0,0" Grid.Column="2" Click="ButtonPercent_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -454,9 +454,9 @@
                 </Style>
             </Label.Style>
         </Label>
-        <Label Content="OISAC" FontFamily="{StaticResource EuroStile}" FontSize="25" Margin="19,10,60,403" Grid.ColumnSpan="2" Foreground="#FFD7D7D7" FontWeight="Bold"/>
-        <Label Content="SM-S8" FontFamily="{StaticResource EuroStile}" Foreground="#FFC8C8C8" Margin="153,4,-11,462" Grid.ColumnSpan="2" Grid.Column="2" FontWeight="Bold"/>
-        <Label Content="TWO WAY POWER" FontFamily="{StaticResource EuroStile}" Foreground="#FFC8C8C8" Margin="132,25,10,441" Grid.ColumnSpan="2" Grid.Column="2" FontSize="10" FontWeight="Bold"/>
+        <Label Content="OISAC" FontFamily="{StaticResource EuroStile}" FontSize="25" Margin="19,14,60,399" Grid.ColumnSpan="2" Foreground="#FFD7D7D7" FontWeight="Bold"/>
+        <Label Content="SM-S8" FontFamily="{StaticResource EuroStile}" Foreground="#FFC8C8C8" Margin="143,7,-1,459" Grid.ColumnSpan="2" Grid.Column="2" FontWeight="Bold"/>
+        <Label Content="TWO WAY POWER" FontFamily="{StaticResource EuroStile}" Foreground="#FFC8C8C8" Margin="119,28,7,438" Grid.ColumnSpan="2" Grid.Column="2" FontSize="10" FontWeight="Bold"/>
 
     </Grid>
 

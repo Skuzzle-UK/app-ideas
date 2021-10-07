@@ -7,7 +7,7 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        public Sum sum = new Sum();
+        private Sum sum = new Sum();
 
         public MainWindow()
         {
@@ -153,6 +153,11 @@ namespace Calculator
         private void ButtonSign_Click(object sender, RoutedEventArgs e)
         {
             sum.SummandSignSwap();
+        }
+
+        private void ButtonPercent_Click(object sender, RoutedEventArgs e)
+        {
+            sum.Operation(Sum.Operator.percent);
         }
     }
 }
