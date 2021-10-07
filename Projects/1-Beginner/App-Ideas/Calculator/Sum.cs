@@ -24,7 +24,7 @@ namespace Calculator
         }
 
         private decimal _product;
-        private List<decimal> _productHistory = new List<decimal>();
+        private List<decimal> _productHistory = new List<decimal>(); //@TODO needs to record sign information also. Will need a struct/class designing for this List<History> or something
 
         public decimal product
         {
