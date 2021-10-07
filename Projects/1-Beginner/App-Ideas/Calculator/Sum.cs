@@ -23,7 +23,31 @@ namespace Calculator
             negative
         }
 
-        public decimal product { get; set; }
+        private decimal _product;
+        private List<decimal> _productHistory = new List<decimal>();
+
+        public decimal product
+        {
+            get
+            {
+                return _product;
+            }
+            set
+            {
+                _productHistory.Add(_product);
+                _product = value;
+            }
+        }
+
+        public void Undo()
+        {
+            if (_productHistory.Count > 0)
+            {
+                _product = _productHistory[_productHistory.Count - 1];
+                _productHistory.RemoveAt(_productHistory.Count - 1);
+                DisplayProduct();
+            }
+        }
 
         public bool DisplayingProduct = false;
 
@@ -53,7 +77,6 @@ namespace Calculator
             }
         }
         private bool _decimalPlace;
-        private List<decimal> _productHistory = new List<decimal>();
         private Operator @lastoperator;
         
         private Sign _sign;

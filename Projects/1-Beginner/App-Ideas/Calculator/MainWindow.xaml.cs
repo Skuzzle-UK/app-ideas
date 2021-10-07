@@ -159,5 +159,10 @@ namespace Calculator
         {
             sum.Operation(Sum.Operator.percent);
         }
+
+        private void ButtonUndo_Click(object sender, RoutedEventArgs e)
+        {
+            sum.Undo();
+        }
     }
 }

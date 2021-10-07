@@ -457,6 +457,23 @@
         <Label Content="OISAC" FontFamily="{StaticResource EuroStile}" FontSize="25" Margin="19,14,60,399" Grid.ColumnSpan="2" Foreground="#FFD7D7D7" FontWeight="Bold"/>
         <Label Content="SM-S8" FontFamily="{StaticResource EuroStile}" Foreground="#FFC8C8C8" Margin="143,7,-1,459" Grid.ColumnSpan="2" Grid.Column="2" FontWeight="Bold"/>
         <Label Content="TWO WAY POWER" FontFamily="{StaticResource EuroStile}" Foreground="#FFC8C8C8" Margin="119,28,7,438" Grid.ColumnSpan="2" Grid.Column="2" FontSize="10" FontWeight="Bold"/>
+        <Button x:Name="ButtonUndo" Content="⎌" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="153,177,0,0" Grid.Column="2" Grid.ColumnSpan="2" Click="ButtonUndo_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF141414" Offset="1"/>
+                    <GradientStop Color="#FF383838" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF4F4F4F" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
 
     </Grid>
 
