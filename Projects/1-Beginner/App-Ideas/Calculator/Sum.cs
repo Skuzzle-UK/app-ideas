@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 
+
 namespace Calculator
 {
     public class Sum : INotifyPropertyChanged
@@ -39,6 +40,7 @@ namespace Calculator
             }
             set
             {
+                //@TODO remove decimal places if not required due to zero post decimal value.
                 ProductState ps = new ProductState();
                 ps.productValue = _product;
                 if (product < 0)
@@ -228,7 +230,6 @@ namespace Calculator
             {
                 decimal onePercentOfProduct = product / 100;
                 decimal calculatedPercent = onePercentOfProduct * val;
-                //@TODO Sign not displaying for negative percentages until equal is pressed
                 switch (lastoperator)
                 {
                     case Operator.none:
@@ -255,6 +256,14 @@ namespace Calculator
                         DisplayProduct();
                         break;
                 }
+                if (product < 0)
+                {
+                    sign = Sign.negative;
+                }
+                else
+                {
+                    sign = Sign.positive;
+                }
                 lastoperator = @operator;
             }
 
@@ -276,11 +285,24 @@ namespace Calculator
 
         public void Undo()
         {
-            if (_productHistory.Count > 0)
+            if (lastoperator == Operator.equal)
             {
                 _product = _productHistory[_productHistory.Count - 1].productValue;
                 sign = _productHistory[_productHistory.Count - 1].productSign;
                 _productHistory.RemoveAt(_productHistory.Count - 1);
+                lastoperator = Operator.none;
+                DisplayProduct();
+            }
+             else if (lastoperator != Operator.none)
+            {
+                lastoperator = Operator.none;
+            }
+            else if (_productHistory.Count > 0)
+            {
+                _product = _productHistory[_productHistory.Count - 1].productValue;
+                sign = _productHistory[_productHistory.Count - 1].productSign;
+                _productHistory.RemoveAt(_productHistory.Count - 1);
+                lastoperator = Operator.none;
                 DisplayProduct();
             }
         }
