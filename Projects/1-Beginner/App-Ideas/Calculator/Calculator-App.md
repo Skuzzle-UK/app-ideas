@@ -44,7 +44,7 @@ currently displayed.
 -   [x] User can see a decimal point ('.') button on the entry pad to that 
 allows floating point numbers up to 3 places to be entered and operations to
 be carried out to the maximum number of decimal places entered for any one
-number (Chosen to allow any amount of decimal places).
+number (I have chosen to allow any amount of decimal places).
 
 ## Useful links and resources
 
