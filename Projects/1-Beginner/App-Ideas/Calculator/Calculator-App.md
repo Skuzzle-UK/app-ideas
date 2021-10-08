@@ -29,10 +29,10 @@ operation on:
     * the result of the preceding operation and the last number entered OR
     * the last two numbers entered OR
     * the last number entered
--   [ ] User can click the 'C' button to clear the last number or the last
+-   [x] User can click the 'C' button to clear the last number or the last
 operation. If the users last entry was an operation the display will be
 updated to the value that preceded it.
--   [ ] User can click the 'AC' button to clear all internal work areas and
+-   [x] User can click the 'AC' button to clear all internal work areas and
 to set the display to 0.
 -   [ ] User can see 'ERR' displayed if any operation would exceed the 
 8 digit maximum.
