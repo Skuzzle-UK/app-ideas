@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Created by and copyright of Nicholas Edward Bailey 07/10/2021
+//Binary
+//Library for working with binary numbers
+
+using System;
 
 namespace Binary
 {

@@ -18,6 +18,7 @@ private void example()
     Console.WriteLine(sum.product); //will write the answer "26"
 }*/
 
+using DecimalsExtended;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
