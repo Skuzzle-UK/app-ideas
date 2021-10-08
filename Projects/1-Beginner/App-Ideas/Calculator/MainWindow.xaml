@@ -99,7 +99,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="Button6" Content="6" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="80,334,0,0" Grid.Column="2" Tag="Numerical" Click="Button6_Click">
+        <Button x:Name="Button6" Content="6" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="80,334,0,0" Grid.Column="2" Tag="6" Click="ButtonNumber_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -116,7 +116,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="Button9" Content="9" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="80,280,0,0" Grid.Column="2" Tag="Numerical" Click="Button9_Click">
+        <Button x:Name="Button9" Content="9" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="80,280,0,0" Grid.Column="2" Tag="9" Click="ButtonNumber_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -150,7 +150,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="Button5" Content="5" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="8,334,0,0" Grid.Column="2" Tag="Numerical" Click="Button5_Click">
+        <Button x:Name="Button5" Content="5" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="8,334,0,0" Grid.Column="2" Tag="5" Click="ButtonNumber_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -167,7 +167,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="Button8" Content="8" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="8,280,0,0" Grid.Column="2" Tag="Numerical" Click="Button8_Click">
+        <Button x:Name="Button8" Content="8" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="8,280,0,0" Grid.Column="2" Tag="8" Click="ButtonNumber_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -201,7 +201,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="Button4" Content="4" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="63,334,0,0" Grid.Column="1" Tag="Numerical" Click="Button4_Click">
+        <Button x:Name="Button4" Content="4" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="63,334,0,0" Grid.Column="1" Tag="4" Click="ButtonNumber_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -218,7 +218,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="Button7" Content="7" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="63,280,0,0" Grid.Column="1" Tag="Numerical" Click="Button7_Click">
+        <Button x:Name="Button7" Content="7" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="63,280,0,0" Grid.Column="1" Tag="7" Click="ButtonNumber_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -320,7 +320,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="Button3" Content="3" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="80,390,0,0" Grid.Column="2" Tag="Numerical" Click="Button3_Click">
+        <Button x:Name="Button3" Content="3" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="80,390,0,0" Grid.Column="2" Tag="3" Click="ButtonNumber_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -354,7 +354,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="Button2" Content="2" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="8,390,0,0" Grid.Column="2" Tag="Numerical" Click="Button2_Click">
+        <Button x:Name="Button2" Content="2" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="8,390,0,0" Grid.Column="2" Tag="2" Click="ButtonNumber_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -371,7 +371,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="Button0" Content="0" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="63,444,0,0" Grid.Column="1" Tag="Numerical" Click="Button0_Click">
+        <Button x:Name="Button0" Content="0" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="63,444,0,0" Grid.Column="1" Tag="0" Click="ButtonNumber_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -388,7 +388,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="Button1" Content="1" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="63,390,0,0" Grid.Column="1" Tag="Numerical" Click="Button1_Click">
+        <Button x:Name="Button1" Content="1" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="63,390,0,0" Grid.Column="1" Tag="1" Click="ButtonNumber_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

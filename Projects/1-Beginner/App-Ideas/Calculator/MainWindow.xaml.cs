@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace Calculator
 {
@@ -56,104 +57,15 @@ namespace Calculator
             last_button_final = false;
         }
 
-        private void Button0_Click(object sender, RoutedEventArgs e)
+        private void ButtonNumber_Click(object sender, RoutedEventArgs e)
         {
             if (CheckCharCount())
             {
-                sum.AppendSummand(0);
+                Button b = sender as Button;
+                sum.AppendSummand(int.Parse(b.Tag.ToString()));
                 last_button_operator = false;
                 last_button_final = false;
 
-            }
-        }
-
-        private void Button1_Click(object sender, RoutedEventArgs e)
-        {
-            if (CheckCharCount())
-            {
-                sum.AppendSummand(1);
-                last_button_operator = false;
-                last_button_final = false;
-            }
-        }
-
-        private void Button2_Click(object sender, RoutedEventArgs e)
-        {
-            if (CheckCharCount())
-            {
-                sum.AppendSummand(2);
-                last_button_operator = false;
-                last_button_final = false;
-            }
-        }
-
-        private void Button3_Click(object sender, RoutedEventArgs e)
-        {
-            if (CheckCharCount())
-            {
-                sum.AppendSummand(3);
-                last_button_operator = false;
-                last_button_final = false;
-            }
-        }
-
-        private void Button4_Click(object sender, RoutedEventArgs e)
-        {
-            if (CheckCharCount())
-            {
-                sum.AppendSummand(4);
-                last_button_operator = false;
-                last_button_final = false;
-            }
-        }
-
-        private void Button5_Click(object sender, RoutedEventArgs e)
-        {
-            if (CheckCharCount())
-            {
-                sum.AppendSummand(5);
-                last_button_operator = false;
-                last_button_final = false;
-            }
-        }
-
-        private void Button6_Click(object sender, RoutedEventArgs e)
-        {
-            if (CheckCharCount())
-            {
-                sum.AppendSummand(6);
-                last_button_operator = false;
-                last_button_final = false;
-            }
-        }
-
-        private void Button7_Click(object sender, RoutedEventArgs e)
-        {
-            if (CheckCharCount())
-            {
-                sum.AppendSummand(7);
-                last_button_operator = false;
-                last_button_final = false;
-            }
-        }
-
-        private void Button8_Click(object sender, RoutedEventArgs e)
-        {
-            if (CheckCharCount())
-            {
-                sum.AppendSummand(8);
-                last_button_operator = false;
-                last_button_final = false;
-            }
-        }
-
-        private void Button9_Click(object sender, RoutedEventArgs e)
-        {
-            if (CheckCharCount())
-            {
-                sum.AppendSummand(9);
-                last_button_operator = false;
-                last_button_final = false;
             }
         }
 
