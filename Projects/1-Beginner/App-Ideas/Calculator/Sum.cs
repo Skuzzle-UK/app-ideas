@@ -1,8 +1,27 @@
-﻿using System;
+﻿//Created by and copyright of Nicholas Edward Bailey 08/10/2021
+//Calculator
+//Functions as per a calculator might.
+//Summand values can be appended as if pressing number keys.
+//Operator key presses can be performed.
+//product variable is updated at each operation.
+//Undo history kept until Reset().
+
+/*Usage example:
+private void example()
+{
+    Sum sum = new Sum();
+    sum.AppendSummand(2);
+    sum.AppendSummand(4);
+    sum.Operation(Sum.Operator.add);
+    sum.AppendSummand(2);
+    sum.Operation(Sum.Operator.equal);
+    Console.WriteLine(sum.product); //will write the answer "26"
+}*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
-
 
 namespace Calculator
 {
@@ -40,7 +59,6 @@ namespace Calculator
             }
             set
             {
-                //@TODO remove decimal places if not required due to zero post decimal value.
                 ProductState ps = new ProductState();
                 ps.productValue = _product;
                 if (product < 0)
@@ -52,9 +70,10 @@ namespace Calculator
                     ps.productSign = Sign.positive;
                 }
                 _productHistory.Add(ps);
-                _product = value;
+                _product = value.Normalize();
             }
         }
+
 
         private bool EmptySummand()
         {
