@@ -79,37 +79,42 @@ namespace Calculator
             }
         }
 
-        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+        private void ButtonNormalOperator_Click(object sender, RoutedEventArgs e)
         {
-            sum.Operation(Sum.Operator.add);
+            Button b = sender as Button;
+
+            switch (b.Tag.ToString())
+            {
+                case "add":
+                    sum.Operation(Sum.Operator.add);
+                    break;
+                case "subtract":
+                    sum.Operation(Sum.Operator.subtract);
+                    break;
+                case "multiply":
+                    sum.Operation(Sum.Operator.multiply);
+                    break;
+                case "divide":
+                    sum.Operation(Sum.Operator.divide);
+                    break;
+            }
             last_button_operator = true;
             last_button_final = false;
         }
 
-        private void ButtonSubtract_Click(object sender, RoutedEventArgs e)
+        private void ButtonFinalOperator_Click(object sender, RoutedEventArgs e)
         {
-            sum.Operation(Sum.Operator.subtract);
-            last_button_operator = true;
-            last_button_final = false;
-        }
+            Button b = sender as Button;
 
-        private void ButtonMultiply_Click(object sender, RoutedEventArgs e)
-        {
-            sum.Operation(Sum.Operator.multiply);
-            last_button_operator = true;
-            last_button_final = false;
-        }
-
-        private void ButtonDivide_Click(object sender, RoutedEventArgs e)
-        {
-            sum.Operation(Sum.Operator.divide);
-            last_button_operator = true;
-            last_button_final = false;
-        }
-
-        private void ButtonEquals_Click(object sender, RoutedEventArgs e)
-        {
-            sum.Operation(Sum.Operator.equal);
+            switch (b.Tag.ToString())
+            {
+                case "equals":
+                    sum.Operation(Sum.Operator.equal);
+                    break;
+                case "percent":
+                    sum.Operation(Sum.Operator.percent);
+                    break;
+            }
             last_button_operator = false;
             last_button_final = true;
         }
@@ -117,13 +122,6 @@ namespace Calculator
         private void ButtonSign_Click(object sender, RoutedEventArgs e)
         {
             sum.SummandSignSwap();
-        }
-
-        private void ButtonPercent_Click(object sender, RoutedEventArgs e)
-        {
-            sum.Operation(Sum.Operator.percent);
-            last_button_operator = false;
-            last_button_final = true;
         }
 
         private void ButtonUndo_Click(object sender, RoutedEventArgs e)

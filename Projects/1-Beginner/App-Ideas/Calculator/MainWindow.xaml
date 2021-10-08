@@ -31,7 +31,7 @@
             </TextBox.BorderBrush>
         </TextBox>
 
-        <Button x:Name="ButtonAdd" Content="+" Margin="153,390,0,0" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="40" FontWeight="Normal" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" UseLayoutRounding="False" Height="89" Width="52" Grid.Column="2" Grid.ColumnSpan="2" Click="ButtonAdd_Click">
+        <Button x:Name="ButtonAdd" Content="+" Margin="153,390,0,0" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="40" FontWeight="Normal" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" UseLayoutRounding="False" Height="89" Width="52" Grid.Column="2" Grid.ColumnSpan="2" Click="ButtonNormalOperator_Click" Tag="add">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -48,7 +48,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="ButtonSubtract" Content="-" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="153,334,0,0" Grid.Column="2" Grid.ColumnSpan="2" Click="ButtonSubtract_Click">
+        <Button x:Name="ButtonSubtract" Content="-" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="153,334,0,0" Grid.Column="2" Grid.ColumnSpan="2" Click="ButtonNormalOperator_Click" Tag="subtract">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -65,7 +65,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="ButtonMultiply" Content="x" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="153,280,0,0" Grid.Column="2" Grid.ColumnSpan="2" Click="ButtonMultiply_Click">
+        <Button x:Name="ButtonMultiply" Content="x" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="153,280,0,0" Grid.Column="2" Grid.ColumnSpan="2" Click="ButtonNormalOperator_Click" Tag="multiply">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -82,7 +82,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="ButtonDivide" Content="÷" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="153,228,0,0" Grid.Column="2" Grid.ColumnSpan="2" Click="ButtonDivide_Click">
+        <Button x:Name="ButtonDivide" Content="÷" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="153,228,0,0" Grid.Column="2" Grid.ColumnSpan="2" Click="ButtonNormalOperator_Click" Tag="divide">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -133,7 +133,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="ButtonPercent" Content="%" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="80,228,0,0" Grid.Column="2" Click="ButtonPercent_Click">
+        <Button x:Name="ButtonPercent" Content="%" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="80,228,0,0" Grid.Column="2" Click="ButtonFinalOperator_Click" Tag="percent">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -303,7 +303,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="ButtonEquals" Content="=" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="80,444,0,0" Grid.Column="2" Click="ButtonEquals_Click">
+        <Button x:Name="ButtonEquals" Content="=" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="80,444,0,0" Grid.Column="2" Click="ButtonFinalOperator_Click" Tag="equals">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
