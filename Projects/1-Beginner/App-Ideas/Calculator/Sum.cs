@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 
 namespace Calculator
 {
@@ -217,34 +218,44 @@ namespace Calculator
                         lastoperator = @operator;
                         DisplayProduct();
                         break;
+                    case Operator.percent:
+                        lastoperator = @operator;
+                        DisplayProduct();
+                        break;
                 }
             }
             else
             {
-                //@TODO Code here for percentage calc
+                decimal onePercentOfProduct = product / 100;
+                decimal calculatedPercent = onePercentOfProduct * val;
+                //@TODO Sign not displaying for negative percentages until equal is pressed
                 switch (lastoperator)
                 {
                     case Operator.none:
                         break;
                     case Operator.add:
-                        //Should work out summand percent of product and then add that value to product.
+                        product += calculatedPercent;
                         DisplayProduct();
                         break;
                     case Operator.divide:
-                        //@TODO Not sure what to do here: test a calculator if I get a chance to see what happens if you key eg.. 600 / 30 %
+                        Debug.WriteLine(calculatedPercent);
+                        product /= calculatedPercent;
+                        DisplayProduct();
                         break;
                     case Operator.multiply:
-                        //Should work out summand percent of product and then display the percentage.
+                        product = onePercentOfProduct * val;
                         DisplayProduct();
                         break;
                     case Operator.subtract:
-                        //Should work out summand percent of product and then subtract that value from product.
+                        product -= calculatedPercent;
                         DisplayProduct();
                         break;
                     case Operator.equal:
-                        //@TODO Not sure what to do here: test a calculator if I get a chance to see what happens if you key eg.. 600 / 30 %
+                        product = 0;
+                        DisplayProduct();
                         break;
                 }
+                lastoperator = @operator;
             }
 
             if (@operator == Operator.equal)
