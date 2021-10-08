@@ -132,13 +132,16 @@ namespace Calculator
             _productHistory.Clear();
         }
 
-        //@TODO MAYBE clear after an equals/percent etc should actually reset due to sum being assumed complete?
-        //Implement at a later date after testing on a real calculator.
         public void Clear()
         {
             sign = Sign.positive;
             _decimalPlace = false;
             summand = "0";
+        }
+
+        public void ClearLastOperator()
+        {
+            lastoperator = Operator.none;
         }
 
         public void DisplayProduct()
