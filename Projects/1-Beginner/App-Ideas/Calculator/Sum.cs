@@ -16,16 +16,20 @@ namespace Calculator
             equal,
             percent
         }
-
         public enum Sign
         {
             positive,
             negative
         }
 
-        private decimal _product;
-        private List<decimal> _productHistory = new List<decimal>(); //@TODO needs to record sign information also. Will need a struct/class designing for this List<History> or something
+        private struct ProductState
+        {
+            public decimal productValue;
+            public Sign productSign;
+        }
+        private List<ProductState> _productHistory = new List<ProductState>();
 
+        private decimal _product;
         public decimal product
         {
             get
@@ -34,23 +38,33 @@ namespace Calculator
             }
             set
             {
-                _productHistory.Add(_product);
+                ProductState ps = new ProductState();
+                ps.productValue = _product;
+                if (product < 0)
+                {
+                    ps.productSign = Sign.negative;
+                }
+                else
+                {
+                    ps.productSign = Sign.positive;
+                }
+                _productHistory.Add(ps);
                 _product = value;
             }
         }
 
-        public void Undo()
+        private bool EmptySummand()
         {
-            if (_productHistory.Count > 0)
+            switch (summand)
             {
-                _product = _productHistory[_productHistory.Count - 1];
-                _productHistory.RemoveAt(_productHistory.Count - 1);
-                DisplayProduct();
+                case "0":
+                    return true;
+                default:
+                    return false;
             }
         }
-
-        public bool DisplayingProduct = false;
-
+        
+        private bool DisplayingProduct = false;
         private string _summand;
         public string summand
         {
@@ -80,7 +94,7 @@ namespace Calculator
         private Operator @lastoperator;
         
         private Sign _sign;
-        public Sign @sign
+        public Sign sign
         {
             get
             {
@@ -124,6 +138,7 @@ namespace Calculator
 
         public void DisplayProduct()
         {
+            _decimalPlace = false;
             DisplayingProduct = true;
             summand = product.ToString();
         }
@@ -248,14 +263,14 @@ namespace Calculator
             }
         }
 
-        private bool EmptySummand()
+        public void Undo()
         {
-            switch (summand)
+            if (_productHistory.Count > 0)
             {
-                case "0":
-                    return true;
-                default:
-                    return false;
+                _product = _productHistory[_productHistory.Count - 1].productValue;
+                sign = _productHistory[_productHistory.Count - 1].productSign;
+                _productHistory.RemoveAt(_productHistory.Count - 1);
+                DisplayProduct();
             }
         }
     }
