@@ -9,7 +9,7 @@ namespace Calculator
     public partial class MainWindow : Window
     {
         //@TODO memory functions of calculator
-        //@TODO add ERR display for product going over 10 chars
+        //@TODO bug found where equals is pressed followed by attempting to start a new sum without pressing clear.
         private Sum sum = new Sum();
         private bool last_button_operator = false;
         private bool last_button_final = false;
