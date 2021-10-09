@@ -144,5 +144,25 @@ namespace Calculator
                 sum.ClearLastOperator();
             }
         }
+
+        private void ButtonMPlus_Click(object sender, RoutedEventArgs e)
+        {
+            sum.AddToMemory();
+        }
+
+        private void ButtonMMinus_Click(object sender, RoutedEventArgs e)
+        {
+            sum.SubtractFromMemory();
+        }
+
+        private void ButtonMR_Click(object sender, RoutedEventArgs e)
+        {
+            sum.RecallMemory();
+        }
+
+        private void ButtonMC_Click(object sender, RoutedEventArgs e)
+        {
+            sum.ClearMemory();
+        }
     }
 }

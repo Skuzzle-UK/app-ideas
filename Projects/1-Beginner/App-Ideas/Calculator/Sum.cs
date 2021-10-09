@@ -75,6 +75,7 @@ namespace Calculator
             }
         }
 
+        private decimal memory;
 
         private bool EmptySummand()
         {
@@ -86,7 +87,7 @@ namespace Calculator
                     return false;
             }
         }
-        
+
         private bool DisplayingProduct = false;
         private string _summand;
         public string summand
@@ -115,7 +116,7 @@ namespace Calculator
         }
         private bool _decimalPlace;
         private Operator @lastoperator;
-        
+
         private Sign _sign;
         public Sign sign
         {
@@ -142,6 +143,7 @@ namespace Calculator
         public Sum()
         {
             Reset();
+            ClearMemory();
         }
 
         public void Reset()
@@ -150,6 +152,36 @@ namespace Calculator
             product = 0;
             Clear();
             _productHistory.Clear();
+        }
+
+        public void ClearMemory()
+        {
+            memory = 0;
+        }
+        
+        public void AddToMemory(decimal val)
+        {
+            memory += val;
+        }
+
+        public void AddToMemory()
+        {
+            //@TODO
+        }
+
+        public void SubtractFromMemory(decimal val)
+        {
+            memory -= val;
+        }
+
+        public void SubtractFromMemory()
+        {
+            //@TODO
+        }
+
+        public void RecallMemory()
+        {
+            //@TODO recall memory to summand
         }
 
         public void Clear()
