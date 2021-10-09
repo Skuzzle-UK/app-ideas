@@ -219,7 +219,7 @@ namespace Calculator
         {
             if (EmptySummand() || DisplayingProduct)
             {
-                if (lastoperator == Operator.equal || lastoperator == Operator.percent) //@TODO May need to add something for memory displayed too.
+                if (lastoperator == Operator.equal || lastoperator == Operator.percent)
                 {
                     Reset();
                 }
