@@ -1,3 +1,12 @@
+Project fully completed as a C# WPF app.
+
+I went a bit further with this one and tried to replicate an old well known calculator.
+
+I have added an Undo button to the calculator design which isn't there on the original calculator.
+
+Additional functions added to the design brief include percent functions and (memory) functions.
+
+
 # Calculator
 
 **Tier:** 1-Beginner
@@ -34,7 +43,7 @@ operation. If the users last entry was an operation the display will be
 updated to the value that preceded it.
 -   [x] User can click the 'AC' button to clear all internal work areas and
 to set the display to 0.
--   [ ] User can see 'ERR' displayed if any operation would exceed the 
+-   [x] User can see 'ERR' displayed if any operation would exceed the 
 8 digit maximum.
 
 ## Bonus features
