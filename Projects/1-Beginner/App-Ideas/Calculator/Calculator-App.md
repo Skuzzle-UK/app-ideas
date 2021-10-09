@@ -1,10 +1,9 @@
 Project fully completed as a C# WPF app.
-
 I went a bit further with this one and tried to replicate an old well known calculator.
-
 I have added an Undo button to the calculator design which isn't there on the original calculator.
-
 Additional functions added to the design brief include percent functions and (memory) functions.
+
+*Binary included.*
 
 
 # Calculator
