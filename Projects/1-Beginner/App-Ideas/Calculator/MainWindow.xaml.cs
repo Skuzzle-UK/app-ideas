@@ -59,7 +59,7 @@ namespace Calculator
 
         private void ButtonNumber_Click(object sender, RoutedEventArgs e)
         {
-            if (CheckCharCount())
+            if (CheckCharCount() || last_button_operator || last_button_final)
             {
                 Button b = sender as Button;
                 sum.AppendSummand(int.Parse(b.Tag.ToString()));
@@ -133,15 +133,39 @@ namespace Calculator
 
         private void ValueDisplay_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //@TODO strip down decimal places to fit in 10 digits if for example number is 10.333333333333445578 make it 10.3333333 before displaying ERR. ERR to be displayed only if more than 10
-            //digits before decimal place
             TextBox text = sender as TextBox;
+            bool isGood = false;
+            string str = "";
+
             if (text.Text.Length > 10)
             {
-                text.Text = "ERR";
-                last_button_operator = false;
-                last_button_final = true;
-                sum.ClearLastOperator();
+                char[] chars = text.Text.ToCharArray();
+                for (int i = 0; i < 10; i++)
+                {
+                    str += chars[i].ToString();
+                    if (chars[i].ToString() == ".")
+                    {
+                        isGood = true;
+                        if (int.Parse(chars[10].ToString()) >= 5 && chars[9].ToString() != ".")
+                        {
+                            int j = int.Parse(chars[9].ToString());
+                            j++;
+                            chars[9] = char.Parse(j.ToString());
+                        }
+                    }
+                }
+
+                if (isGood)
+                {
+                    text.Text = str;
+                }
+                else
+                {
+                    text.Text = "ERR";
+                    last_button_operator = false;
+                    last_button_final = true;
+                    sum.ClearLastOperator();
+                }
             }
         }
 

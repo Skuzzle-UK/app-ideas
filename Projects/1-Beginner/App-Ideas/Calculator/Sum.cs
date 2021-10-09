@@ -223,8 +223,11 @@ namespace Calculator
                 {
                     Reset();
                 }
-                //@TODO look at this line to stop negative sign dissapearing if pressed straight before number
-                sign = Sign.positive;
+                if (lastWasOperation)
+                {
+                    sign = Sign.positive;
+                    lastWasOperation = false;
+                }
                 summand = null;
                 DisplayingProduct = false;
             }
@@ -248,19 +251,24 @@ namespace Calculator
             }
             else
             {
-                sign = Sign.positive;
+                if (!lastWasOperation) //@TODO check if this is weird behaviour. Seems good to me but stops negative becoming postitive after an operation unless double pressed.
+                {
+                    sign = Sign.positive;
+                }
             }
+            lastWasOperation = false;
         }
 
+        private bool lastWasOperation = false;
         public void Operation(Operator @operator)
         {
+            lastWasOperation = true;
             decimal val = decimal.Parse(summand);
             
             if(sign == Sign.negative)
             {
                 val *= -1;
             }
-
             if (@operator != Operator.percent)
             {
                 switch (lastoperator)
