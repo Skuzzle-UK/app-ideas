@@ -166,7 +166,11 @@ namespace Calculator
 
         public void AddToMemory()
         {
-            //@TODO
+            memory += decimal.Parse(summand);
+            if (sign == Sign.negative)
+            {
+                memory *= -1;
+            }
         }
 
         public void SubtractFromMemory(decimal val)
@@ -176,12 +180,20 @@ namespace Calculator
 
         public void SubtractFromMemory()
         {
-            //@TODO
+            memory -= decimal.Parse(summand);
+            if (sign == Sign.negative)
+            {
+                memory *= -1;
+            }
         }
 
         public void RecallMemory()
         {
-            //@TODO recall memory to summand
+            summand = memory.ToString();
+            if (memory < 0)
+            {
+                sign = Sign.negative;
+            }
         }
 
         public void Clear()
@@ -211,6 +223,7 @@ namespace Calculator
                 {
                     Reset();
                 }
+                //@TODO look at this line to stop negative sign dissapearing if pressed straight before number
                 sign = Sign.positive;
                 summand = null;
                 DisplayingProduct = false;

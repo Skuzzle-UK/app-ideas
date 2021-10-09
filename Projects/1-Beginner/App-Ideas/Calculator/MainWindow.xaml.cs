@@ -8,7 +8,6 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        //@TODO memory functions of calculator
         private Sum sum = new Sum();
         private bool last_button_operator = false;
         private bool last_button_final = false;
