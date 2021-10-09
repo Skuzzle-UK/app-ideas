@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-E:\Coding\app-ideas\Projects\1-Beginner\App-Ideas\Calculator\obj\Debug\net5.0-windows\
+E:\Coding\app-ideas\Projects\1-Beginner\App-Ideas\Calculator\obj\Release\net5.0-windows\
 Calculator
 none
 false
-TRACE;DEBUG;NET;NET5_0;NETCOREAPP
+TRACE;RELEASE;NET;NET5_0;NETCOREAPP
 E:\Coding\app-ideas\Projects\1-Beginner\App-Ideas\Calculator\App.xaml
 11407045341
 
-71914409074
+72056703465
 193-1891726104
 MainWindow.xaml;
 

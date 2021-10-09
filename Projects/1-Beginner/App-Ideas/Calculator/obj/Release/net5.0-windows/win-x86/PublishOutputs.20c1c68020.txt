@@ -1,0 +1,2 @@
+E:\Coding\app-ideas\Projects\1-Beginner\App-Ideas\Calculator\bin\Release\net5.0-windows\publish\Calculator.pdb
+E:\Coding\app-ideas\Projects\1-Beginner\App-Ideas\Calculator\bin\Release\net5.0-windows\publish\Calculator.exe
