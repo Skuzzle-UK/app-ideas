@@ -61,7 +61,7 @@ namespace Calculator
 
         private void ButtonNumber_Click(object sender, RoutedEventArgs e)
         {
-            if (CheckCharCount())
+            if (CheckCharCount() || last_button_operator || last_button_final)
             {
                 Button b = sender as Button;
                 sum.AppendSummand(int.Parse(b.Tag.ToString()));
@@ -131,6 +131,18 @@ namespace Calculator
             sum.Undo();
             last_button_operator = false;
             last_button_final = false;
+        }
+
+        private void ValueDisplay_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox text = sender as TextBox;
+            if (text.Text.Length > 10)
+            {
+                text.Text = "ERR";
+                last_button_operator = false;
+                last_button_final = true;
+                sum.ClearLastOperator();
+            }
         }
     }
 }
