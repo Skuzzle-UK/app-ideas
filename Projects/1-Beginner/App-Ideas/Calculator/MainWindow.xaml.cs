@@ -9,7 +9,6 @@ namespace Calculator
     public partial class MainWindow : Window
     {
         //@TODO memory functions of calculator
-        //@TODO bug found where equals is pressed followed by attempting to start a new sum without pressing clear.
         private Sum sum = new Sum();
         private bool last_button_operator = false;
         private bool last_button_final = false;
@@ -61,7 +60,7 @@ namespace Calculator
 
         private void ButtonNumber_Click(object sender, RoutedEventArgs e)
         {
-            if (CheckCharCount() || last_button_operator || last_button_final)
+            if (CheckCharCount())
             {
                 Button b = sender as Button;
                 sum.AppendSummand(int.Parse(b.Tag.ToString()));
@@ -135,6 +134,8 @@ namespace Calculator
 
         private void ValueDisplay_TextChanged(object sender, TextChangedEventArgs e)
         {
+            //@TODO strip down decimal places to fit in 10 digits if for example number is 10.333333333333445578 make it 10.3333333 before displaying ERR. ERR to be displayed only if more than 10
+            //digits before decimal place
             TextBox text = sender as TextBox;
             if (text.Text.Length > 10)
             {

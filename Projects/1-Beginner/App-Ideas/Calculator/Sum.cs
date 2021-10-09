@@ -207,6 +207,10 @@ namespace Calculator
         {
             if (EmptySummand() || DisplayingProduct)
             {
+                if (lastoperator == Operator.equal || lastoperator == Operator.percent)
+                {
+                    Reset();
+                }
                 sign = Sign.positive;
                 summand = null;
                 DisplayingProduct = false;
