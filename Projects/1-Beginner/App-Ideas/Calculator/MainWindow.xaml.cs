@@ -1,5 +1,11 @@
-﻿using System.Windows;
+﻿using System.Diagnostics;
+using System.Reflection;
+using System.Windows;
+using System.Windows.Automation.Peers;
+using System.Windows.Automation.Provider;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
+using System.Windows.Input;
 
 namespace Calculator
 {
@@ -104,6 +110,7 @@ namespace Calculator
 
         private void ButtonFinalOperator_Click(object sender, RoutedEventArgs e)
         {
+            Debug.WriteLine(e);
             Button b = sender as Button;
 
             switch (b.Tag.ToString())
@@ -118,6 +125,7 @@ namespace Calculator
             last_button_operator = false;
             last_button_final = true;
         }
+
 
         private void ButtonSign_Click(object sender, RoutedEventArgs e)
         {
@@ -187,6 +195,60 @@ namespace Calculator
         private void ButtonMC_Click(object sender, RoutedEventArgs e)
         {
             sum.ClearMemory();
+        }
+
+
+        //@TODO needs percent key adding somehow and look at why weird behaviour after button physically pressed.
+        private void Calculator_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Key.Enter:
+                    ButtonEquals.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                    break;
+                case Key.NumPad0:
+                    Button0.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                    break;
+                case Key.NumPad1:
+                    Button1.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                    break;
+                case Key.NumPad2:
+                    Button2.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                    break;
+                case Key.NumPad3:
+                    Button3.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                    break;
+                case Key.NumPad4:
+                    Button4.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                    break;
+                case Key.NumPad5:
+                    Button5.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                    break;
+                case Key.NumPad6:
+                    Button6.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                    break;
+                case Key.NumPad7:
+                    Button7.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                    break;
+                case Key.NumPad8:
+                    Button8.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                    break;
+                case Key.NumPad9:
+                    Button9.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                    break;
+                case Key.Multiply:
+                    ButtonMultiply.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                    break;
+                case Key.Divide:
+                    ButtonDivide.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                    break;
+                case Key.Subtract:
+                    ButtonSubtract.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                    break;
+                case Key.Add:
+                    ButtonAdd.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                    break;
+            }
         }
     }
 }

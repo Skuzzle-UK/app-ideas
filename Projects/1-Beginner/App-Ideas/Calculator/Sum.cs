@@ -307,6 +307,7 @@ namespace Calculator
                         DisplayProduct();
                         break;
                 }
+                Debug.WriteLine(product);
             }
             else
             {

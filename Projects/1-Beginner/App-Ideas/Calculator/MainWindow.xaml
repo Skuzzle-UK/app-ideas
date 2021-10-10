@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="Calculator" Height="543" Width="415" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="#FF282828" BorderBrush="Black" WindowStyle="SingleBorderWindow" ResizeMode="CanMinimize">
+        Title="Calculator" Height="543" Width="415" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="#FF282828" BorderBrush="Black" WindowStyle="SingleBorderWindow" ResizeMode="CanMinimize" WindowStartupLocation="Manual" PreviewKeyDown="Calculator_PreviewKeyDown">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="18*"/>
@@ -454,7 +454,7 @@
                 </Style>
             </Label.Style>
         </Label>
-        <Label Content="OISAC" FontFamily="{StaticResource EuroStile}" FontSize="25" Margin="19,14,60,399" Grid.ColumnSpan="2" Foreground="#FFD7D7D7" FontWeight="Bold"/>
+        <Label x:Name="label" Content="OISAC" FontFamily="{StaticResource EuroStile}" FontSize="25" Margin="19,14,60,399" Grid.ColumnSpan="2" Foreground="#FFD7D7D7" FontWeight="Bold"/>
         <Label Content="SM-S8" FontFamily="{StaticResource EuroStile}" Foreground="#FFC8C8C8" Margin="143,7,-1,459" Grid.ColumnSpan="2" Grid.Column="2" FontWeight="Bold"/>
         <Label Content="TWO WAY POWER" FontFamily="{StaticResource EuroStile}" Foreground="#FFC8C8C8" Margin="119,28,7,438" Grid.ColumnSpan="2" Grid.Column="2" FontSize="10" FontWeight="Bold"/>
         <Button x:Name="ButtonUndo" Content="⎌" BorderThickness="2,2,2,2" Foreground="#FFC2C2C2" FontSize="20" FontWeight="Normal" Padding="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="52" Margin="153,177,0,0" Grid.Column="2" Grid.ColumnSpan="2" Click="ButtonUndo_Click">
