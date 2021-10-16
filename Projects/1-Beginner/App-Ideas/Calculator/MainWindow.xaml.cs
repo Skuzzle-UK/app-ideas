@@ -110,7 +110,6 @@ namespace Calculator
 
         private void ButtonFinalOperator_Click(object sender, RoutedEventArgs e)
         {
-            Debug.WriteLine(e);
             Button b = sender as Button;
 
             switch (b.Tag.ToString())
@@ -124,6 +123,7 @@ namespace Calculator
             }
             last_button_operator = false;
             last_button_final = true;
+            ValueDisplay.Focus();
         }
 
 
@@ -198,13 +198,17 @@ namespace Calculator
         }
 
 
-        //@TODO needs percent key adding somehow and look at why weird behaviour after button physically pressed.
+        //@TODO needs percent key adding somehow.
+        //@TODO make backspace act as clear.
+        //@TODO make delete act as AC
+        //@TODO ctrl z to undo
         private void Calculator_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             switch (e.Key)
             {
                 case Key.Enter:
-                    ButtonEquals.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                    Button button = ButtonEquals;
+                    ButtonFinalOperator_Click(button, new RoutedEventArgs(Button.ClickEvent));
                     break;
                 case Key.NumPad0:
                     Button0.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));

@@ -307,7 +307,6 @@ namespace Calculator
                         DisplayProduct();
                         break;
                 }
-                Debug.WriteLine(product);
             }
             else
             {
@@ -322,7 +321,6 @@ namespace Calculator
                         DisplayProduct();
                         break;
                     case Operator.divide:
-                        Debug.WriteLine(calculatedPercent);
                         product /= calculatedPercent;
                         DisplayProduct();
                         break;

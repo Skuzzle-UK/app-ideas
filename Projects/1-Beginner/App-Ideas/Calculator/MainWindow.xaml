@@ -23,6 +23,12 @@
             </Rectangle.Stroke>
         </Rectangle>
         <TextBox x:Name="ValueDisplay" TextWrapping="Wrap" Height="81" Margin="14,62,0,0" VerticalAlignment="Top" Background="#FFF3F3F3" BorderThickness="15,8,15,8" HorizontalAlignment="Left" Width="372" Grid.ColumnSpan="4" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontFamily="{StaticResource Digital}" FontSize="65" MaxLength="10" MaxLines="1" Text="{Binding summand}" IsReadOnly="True" TextChanged="ValueDisplay_TextChanged">
+            <TextBox.SelectionBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF747474" Offset="0.006"/>
+                    <GradientStop Color="#FF3D3D3D" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.SelectionBrush>
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF747474"/>
