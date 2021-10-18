@@ -51,8 +51,8 @@
             },
 
             copyToClipboard: function () {
-                navigator.clipboard.writeText("CSS: border-radius: " + this.cssStr + ";");
-                alert("Copied to clipboard: " + "CSS: border-radius: " + this.cssStr + ";");
+                navigator.clipboard.writeText("border-radius: " + this.cssStr + ";");
+                alert("Copied to clipboard: " + "border-radius: " + this.cssStr + ";");
             }
         }
     }
