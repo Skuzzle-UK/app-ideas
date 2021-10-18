@@ -197,60 +197,33 @@ namespace Calculator
             sum.ClearMemory();
         }
 
-
-        //@TODO needs percent key adding somehow.
-        //@TODO make backspace act as clear.
-        //@TODO make delete act as AC
-        //@TODO ctrl z to undo
         private void Calculator_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             switch (e.Key)
             {
-                case Key.Enter:
-                    Button button = ButtonEquals;
-                    ButtonFinalOperator_Click(button, new RoutedEventArgs(Button.ClickEvent));
-                    break;
-                case Key.NumPad0:
-                    Button0.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                    break;
-                case Key.NumPad1:
-                    Button1.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                    break;
-                case Key.NumPad2:
-                    Button2.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                    break;
-                case Key.NumPad3:
-                    Button3.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                    break;
-                case Key.NumPad4:
-                    Button4.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                    break;
-                case Key.NumPad5:
-                    Button5.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                    break;
-                case Key.NumPad6:
-                    Button6.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                    break;
-                case Key.NumPad7:
-                    Button7.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                    break;
-                case Key.NumPad8:
-                    Button8.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                    break;
-                case Key.NumPad9:
-                    Button9.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                    break;
-                case Key.Multiply:
-                    ButtonMultiply.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                    break;
-                case Key.Divide:
-                    ButtonDivide.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                    break;
-                case Key.Subtract:
-                    ButtonSubtract.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                    break;
-                case Key.Add:
-                    ButtonAdd.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                case Key.Enter: ButtonEquals.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); break;
+                case Key.NumPad0: Button0.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); break;
+                case Key.NumPad1: Button1.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); break;
+                case Key.NumPad2: Button2.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); break;
+                case Key.NumPad3: Button3.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); break;
+                case Key.NumPad4: Button4.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); break;
+                case Key.NumPad5: Button5.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); break;
+                case Key.NumPad6: Button6.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); break;
+                case Key.NumPad7: Button7.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); break;
+                case Key.NumPad8: Button8.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); break;
+                case Key.NumPad9: Button9.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); break;
+                case Key.Multiply: ButtonMultiply.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); break;
+                case Key.Divide: ButtonDivide.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); break;
+                case Key.Subtract: ButtonSubtract.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); break;
+                case Key.Add: ButtonAdd.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); break;
+                case Key.Delete: ButtonAC.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); break;
+                case Key.Back: ButtonC.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); break;
+                default:
+                    switch (Keyboard.GetCharFromKey(e.Key).ToString())
+                    {
+                        case "%": ButtonPercent.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); break;
+                        case "": ButtonUndo.RaiseEvent(new RoutedEventArgs(Button.ClickEvent)); break;
+                    }
                     break;
             }
         }
