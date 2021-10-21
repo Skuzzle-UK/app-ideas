@@ -22,7 +22,6 @@ using DecimalsExtended;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 
 namespace Calculator
 {
@@ -158,7 +157,7 @@ namespace Calculator
         {
             memory = 0;
         }
-        
+
         public void AddToMemory(decimal val)
         {
             memory += val;
@@ -264,8 +263,8 @@ namespace Calculator
         {
             lastWasOperation = true;
             decimal val = decimal.Parse(summand);
-            
-            if(sign == Sign.negative)
+
+            if (sign == Sign.negative)
             {
                 val *= -1;
             }
@@ -374,7 +373,7 @@ namespace Calculator
                 lastoperator = Operator.none;
                 DisplayProduct();
             }
-             else if (lastoperator != Operator.none)
+            else if (lastoperator != Operator.none)
             {
                 lastoperator = Operator.none;
             }
