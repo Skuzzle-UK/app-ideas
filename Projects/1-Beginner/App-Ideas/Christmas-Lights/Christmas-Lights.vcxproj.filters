@@ -27,9 +27,15 @@
     <ClInclude Include="LEDSequence.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="RGB_LED.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LEDSequence.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RGB_LED.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

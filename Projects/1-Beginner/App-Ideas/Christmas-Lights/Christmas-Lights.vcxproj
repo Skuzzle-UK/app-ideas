@@ -117,10 +117,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LEDSequence.h" />
+    <ClInclude Include="RGB_LED.h" />
     <ClInclude Include="__vm\.Christmas-Lights.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LEDSequence.cpp" />
+    <ClCompile Include="RGB_LED.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
