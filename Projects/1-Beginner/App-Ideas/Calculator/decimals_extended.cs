@@ -2,8 +2,7 @@
 //Decimals_Extended
 //An extension class for decimal values
 
-namespace DecimalsExtended
-{
+
     public static class Decimals_Extended //Strips unneccesary zeros after the decimal place
     {
         public static decimal Normalize(this decimal value)
@@ -11,4 +10,3 @@ namespace DecimalsExtended
             return value / 1.000000000000000000000000000000000m;
         }
     }
-}
