@@ -1,5 +1,4 @@
 ﻿using System;
-using Bin = Binary.Binary;
 
 namespace B2D
 {
@@ -12,7 +11,7 @@ namespace B2D
             {
                 Console.WriteLine("Input a binary number:");
                 Console.Write(">");
-                Bin binary = new(Console.ReadLine());
+                Binary binary = new(Console.ReadLine());
 
                 if (binary.Value != null) //Required for null input to not error
                 {
@@ -23,7 +22,7 @@ namespace B2D
                     Console.WriteLine(decoutput);
 
                     //converts back to binary
-                    Bin binoutput = Bin.ToBinary(decoutput);
+                    Binary binoutput = Binary.ToBinary(decoutput);
                     Console.Write("Converted back to binary: ");
                     Console.WriteLine(binoutput.Value);
                 }
