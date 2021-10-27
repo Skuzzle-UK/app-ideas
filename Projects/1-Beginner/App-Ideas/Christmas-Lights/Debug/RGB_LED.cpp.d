@@ -1,6 +1,6 @@
-C:\Users\nick\AppData\Local\Temp\VMBuilds\Christmas-Lights\mega_atmega2560\Debug\RGB_LED.cpp.o: \
- C:\Users\nick\AppData\Local\Temp\VMBuilds\Christmas-Lights\mega_atmega2560\Debug\RGB_LED.cpp \
- C:\Users\nick\AppData\Local\Temp\VMBuilds\Christmas-Lights\mega_atmega2560\Debug\RGB_LED.h \
+C:\Users\nick.BEAST\AppData\Local\Temp\VMBuilds\Christmas-Lights\mega_atmega2560\Debug\RGB_LED.cpp.o: \
+ C:\Users\nick.BEAST\AppData\Local\Temp\VMBuilds\Christmas-Lights\mega_atmega2560\Debug\RGB_LED.cpp \
+ C:\Users\nick.BEAST\AppData\Local\Temp\VMBuilds\Christmas-Lights\mega_atmega2560\Debug\RGB_LED.h \
  E:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Arduino.h \
  E:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/binary.h \
  E:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/WCharacter.h \

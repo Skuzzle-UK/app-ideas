@@ -23,6 +23,8 @@ public:
 	unsigned char red = 255;
 	unsigned char green = 255;
 	unsigned char blue = 255;
+	bool lit = true;
+	
 	
 	// Constructors
 	RGB_LED();
@@ -52,6 +54,6 @@ private:
 	unsigned char _red_pin;
 	unsigned char _green_pin;
 	unsigned char _blue_pin;
-	void ChangeColour(); // Changes the PWM outputs the the physical LED
+	void ChangeColour(); // Changes the PWM outputs to the physical LED
 };
 

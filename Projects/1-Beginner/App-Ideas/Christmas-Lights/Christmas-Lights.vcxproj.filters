@@ -24,18 +24,18 @@
     <ClInclude Include="__vm\.Christmas-Lights.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LEDSequence.h">
+    <ClInclude Include="RGB_LED.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RGB_LED.h">
+    <ClInclude Include="Sequences.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LEDSequence.cpp">
+    <ClCompile Include="RGB_LED.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RGB_LED.cpp">
+    <ClCompile Include="Sequences.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

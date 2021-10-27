@@ -8,8 +8,9 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\nick\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\nick.BEAST\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -17,16 +18,18 @@
       "projectUniqueName": "E:\\Coding\\app-ideas\\Projects\\1-Beginner\\App-Ideas\\Bin2Dec\\Bin2Dec.csproj",
       "projectName": "Bin2Dec",
       "projectPath": "E:\\Coding\\app-ideas\\Projects\\1-Beginner\\App-Ideas\\Bin2Dec\\Bin2Dec.csproj",
-      "packagesPath": "C:\\Users\\nick\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\nick.BEAST\\.nuget\\packages\\",
       "outputPath": "E:\\Coding\\app-ideas\\Projects\\1-Beginner\\App-Ideas\\Bin2Dec\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\nick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nick.BEAST\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

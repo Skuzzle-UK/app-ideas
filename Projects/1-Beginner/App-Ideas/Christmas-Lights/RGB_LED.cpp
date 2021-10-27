@@ -141,4 +141,12 @@ void RGB_LED::ChangeColour() {
 	analogWrite(_red_pin, red);
 	analogWrite(_green_pin, green);
 	analogWrite(_blue_pin, blue);
+	if (red > 0 && green > 0 && blue > 0)
+	{
+		lit = true;
+	}
+	else
+	{
+		lit = false;
+	}
 }
