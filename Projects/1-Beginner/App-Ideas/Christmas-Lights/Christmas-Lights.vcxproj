@@ -116,11 +116,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="even_or_odd.h" />
     <ClInclude Include="RGB_LED.h" />
     <ClInclude Include="Sequences.h" />
     <ClInclude Include="__vm\.Christmas-Lights.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="even_or_odd.cpp" />
     <ClCompile Include="RGB_LED.cpp" />
     <ClCompile Include="Sequences.cpp" />
   </ItemGroup>

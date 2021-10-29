@@ -1,7 +1,9 @@
 #include "Sequences.h"
+#include "even_or_odd.h"
 
 byte Sequences::_position = 0;
 byte Sequences::_selected = 0;
+int Sequences::_speed = 2000;
 bool Sequences::_playing = true;
 
 void Sequences::Play(RGB_LED rgb_led[]) {
@@ -12,9 +14,35 @@ void Sequences::Play(RGB_LED rgb_led[]) {
 		{
 			rgb_led[i].lit = !rgb_led[i].lit;
 		}
-		delay(2000); //@TODO introduce speed adjustment
+		delay(_speed);
 		break;
-	case 1:
+	case 1: // alternate flashing
+		if (Even_Or_Odd::Even(_position)) {
+			for (int i = 0; i < sizeof rgb_led; i++)
+			{
+				if (Even_Or_Odd::Even(i)) {
+					rgb_led[i].lit = true;
+				}
+				else
+				{
+					rgb_led[i].lit = false;
+				}
+			}
+		}
+		else {
+			for (int i = 0; i < sizeof rgb_led; i++)
+			{
+				if (Even_Or_Odd::Odd(i)) {
+					rgb_led[i].lit = true;
+				}
+				else
+				{
+					rgb_led[i].lit = false;
+				}
+			}
+		}
+		_AdvancePosition(sizeof rgb_led);
+		delay(_speed);
 		break;
 	case 2:
 		break;
@@ -50,4 +78,14 @@ void Sequences::NextSequence() {
 
 bool Sequences::Playing() {
 	return _playing;
+}
+
+void Sequences::_AdvancePosition(int maxAdvance)
+{
+	if (_position < maxAdvance) {
+		_position++;
+	}
+	else {
+		_position = 0;
+	}
 }

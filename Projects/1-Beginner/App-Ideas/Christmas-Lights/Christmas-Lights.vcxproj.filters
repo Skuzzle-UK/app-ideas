@@ -30,12 +30,18 @@
     <ClInclude Include="Sequences.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="even_or_odd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RGB_LED.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Sequences.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="even_or_odd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

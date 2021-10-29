@@ -15,5 +15,7 @@ private:
 	static byte _position;
 	static byte _selected;
 	static bool _playing;
+	static int _speed;
+	static void _AdvancePosition(int);
 };
 
